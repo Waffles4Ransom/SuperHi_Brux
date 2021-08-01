@@ -42,3 +42,32 @@ h1 {
   font-style: italic;
   font-weight: 900;
 }
+
+h2 {
+	font-size: 48px;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+h3 {
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+a {
+	color: #052837;
+	text-decoration: none;
+}
+
+a.button {
+	display: inline-block;
+	background-color: #052837;
+	color: #ffffff;
+	border-radius: 50px;
+	padding: 0.5em 1.5em 0.5em 1.5em;
+}
+
+p {
+	margin: 1.5em 0 1.5em 0;
+}
