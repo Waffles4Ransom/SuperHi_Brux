@@ -24,6 +24,11 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 1s;
+}
+
+header.scrolled {
+  background-color: #ffffff;
 }
 
 header h1, header nav {
