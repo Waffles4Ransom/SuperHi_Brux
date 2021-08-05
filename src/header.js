@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pixels > 100 ? headerTag.classList.add('scrolled') : headerTag.classList.remove('scrolled')
     fadeBox(pixels)
   }
-
+  
   const fadeBox = function(p) {
     const alpha = Math.min(p / 1000, 0.75)
     headerTag.style.boxShadow = ` 0 0 10px rgba(0, 0, 0, ${alpha}) `
