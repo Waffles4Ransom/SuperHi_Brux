@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // eye & mouse diff
     const diffX = mouseX - eyeMidX
-    const diffY = mouseY - eyeMidY
+    const diffY = mouseY - eyeMidY - window.pageYOffset
 
     // Pythagorean theorem
     const diff = Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2))
-    
+
     //capped radius
     const radius = Math.min(3, diff)
 
