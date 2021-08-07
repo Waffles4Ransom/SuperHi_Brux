@@ -1,6 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
   const irisLeft = document.querySelector('div.iris-left')
   const irisRight = document.querySelector('div.iris-right')
+  let interval = null
+
+  const startInterval = function() {
+    clearInterval(interval)
+    interval = setInterval(() => {
+      const x = Math.random() * window.innerWidth
+      const y = Math.random() * window.innerHeight
+      moveEye(irisLeft, x, y)
+      moveEye(irisRight, x, y)
+    }, 3000)
+  }
 
   const moveEye = function(tag, mouseX, mouseY) {
     // center of eye 
@@ -28,6 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
     eyeTag.style.left = cappedX + 'px'
     eyeTag.style.top = cappedY + 'px'
   }
+
+  startInterval()
 
   document.addEventListener('mousemove', (e) => {
     moveEye(irisLeft, e.pageX, e.pageY)
